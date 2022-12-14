@@ -29,6 +29,6 @@ class ClientController extends AbstractController
     )]
     function photo($nom)
     {
-        return new BinaryFileResponse(__DIR__."/../../data/msi.png");
+        return new BinaryFileResponse(__DIR__ . "/../../data/msi.png");
     }
 }
