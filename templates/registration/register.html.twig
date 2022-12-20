@@ -1,23 +1,19 @@
 <!DOCTYPE html>
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <style>
 
-    .navbar .login-form .input-group {
-        margin-right: 4px;
-        float: left;
-    }
-    .navbar .login-form .form-control {
-        max-width: 158px;
-        border-radius: 0 2px 2px 0;
-    }
-    .navbar .login-form .btn {
-        width: 100%;
-    }
 </style>
-<title>Register</title>
-
+</head>
+<title>Inscription</title>
+<h1 class="navbar-brand">Nouveau <b>Compte</b></h1>
+<br>
 {% block body %}
 
-    <h1>Register</h1>
+
     {{ form_start(registrationForm) }}
         {{ form_row(registrationForm.email) }}
         {{ form_row(registrationForm.plainPassword, {
@@ -25,6 +21,6 @@
         }) }}
 
 
-        <button type="submit" class="btn">Register</button>
+        <button type="submit" class="btn">Inscription</button>
     {{ form_end(registrationForm) }}
 {% endblock %}
