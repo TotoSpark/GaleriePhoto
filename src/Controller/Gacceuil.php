@@ -12,7 +12,14 @@ class Gacceuil extends AbstractController
 {
     #[Route('/GAcceuil')]
     public function home(){
-        return $this->render('Gacceuil.html.twig');
+      // return $this->render('Gacceuil.html.twig');
+      session_start();
+      echo $_SESSION['email'];
+       if (!isset($_SESSION['email'])) {
+      echo 'Vous devez vous identifier';
+      exit;
+        }
+
 
     }
 
