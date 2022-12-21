@@ -11,17 +11,17 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 class Gacceuil extends AbstractController
 {
     #[Route('/GAcceuil')]
-    public function home(){
+    //public function home(){
       // return $this->render('Gacceuil.html.twig');
-      session_start();
-      echo $_SESSION['email'];
-       if (!isset($_SESSION['email'])) {
-      echo 'Vous devez vous identifier';
-      exit;
-        }
+     // session_start();
+      //echo $_SESSION['email'];
+      // if (!isset($_SESSION['email'])) {
+      //echo 'Vous devez vous identifier';
+     //exit;
+       // }
 
 
-    }
+   // }
 
 
     public function menu()
