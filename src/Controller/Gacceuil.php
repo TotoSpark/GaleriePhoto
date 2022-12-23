@@ -8,6 +8,9 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 
 
+
+
+
 class Gacceuil extends AbstractController
 {
     #[Route('/GAcceuil')]
@@ -44,5 +47,9 @@ class Gacceuil extends AbstractController
     public function setEmail($email): void{
         $this->email = $email;
     }
+    public function test(){
+        return $this->render('test.html.twig');
+    }
+
     }
 

@@ -1,9 +1,9 @@
 <?php return array(
     'root' => array(
         'name' => '__root__',
-        'pretty_version' => 'dev-main',
-        'version' => 'dev-main',
-        'reference' => '689f9a4e451521ca754cba65cb56825f208bc9dd',
+        'pretty_version' => 'dev-test',
+        'version' => 'dev-test',
+        'reference' => 'dd4bc9cf20e78f082c5ebc529e1918f987ce7f6e',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -11,9 +11,9 @@
     ),
     'versions' => array(
         '__root__' => array(
-            'pretty_version' => 'dev-main',
-            'version' => 'dev-main',
-            'reference' => '689f9a4e451521ca754cba65cb56825f208bc9dd',
+            'pretty_version' => 'dev-test',
+            'version' => 'dev-test',
+            'reference' => 'dd4bc9cf20e78f082c5ebc529e1918f987ce7f6e',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
@@ -172,12 +172,30 @@
             'aliases' => array(),
             'dev_requirement' => false,
         ),
+        'imagine/imagine' => array(
+            'pretty_version' => '1.3.3',
+            'version' => '1.3.3.0',
+            'reference' => 'a6e6da93ea0f76aba33b0e8ed1325523c0413da2',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../imagine/imagine',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
         'laminas/laminas-code' => array(
             'pretty_version' => '4.7.1',
             'version' => '4.7.1.0',
             'reference' => '91aabc066d5620428120800c0eafc0411e441a62',
             'type' => 'library',
             'install_path' => __DIR__ . '/../laminas/laminas-code',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
+        'liip/imagine-bundle' => array(
+            'pretty_version' => '2.10.0',
+            'version' => '2.10.0.0',
+            'reference' => '93bfc6dde87f135f9c3e63330cff23122448f4ee',
+            'type' => 'symfony-bundle',
+            'install_path' => __DIR__ . '/../liip/imagine-bundle',
             'aliases' => array(),
             'dev_requirement' => false,
         ),
@@ -558,6 +576,15 @@
             'replaced' => array(
                 0 => '*',
             ),
+        ),
+        'symfony/process' => array(
+            'pretty_version' => 'v6.1.3',
+            'version' => '6.1.3.0',
+            'reference' => 'a6506e99cfad7059b1ab5cab395854a0a0c21292',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../symfony/process',
+            'aliases' => array(),
+            'dev_requirement' => false,
         ),
         'symfony/property-access' => array(
             'pretty_version' => 'v6.1.7',
