@@ -9,16 +9,7 @@ use Symfony\Component\Routing\Loader\Configurator\RoutingConfigurator;
 
 class Kernel extends BaseKernel
 {
-    public function registerBundles()
-{
-    $bundles = array(
-        // ...
 
-        new Liip\ImagineBundle\LiipImagineBundle(),
-    );
-
-    // ...
-}
     use MicroKernelTrait;
 
     protected function configureContainer(ContainerConfigurator $container): void

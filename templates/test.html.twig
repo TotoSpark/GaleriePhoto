@@ -1,4 +1,6 @@
-<!DOCTYPE html>
+{% extends "base.html.twig"%}
+
+{% block body %}
 <head>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
@@ -10,9 +12,15 @@
 </head>
 <title>test</title>
 <h1>test</h1>
+<h1>Adding a new product</h1>
 
+{{ form_start(form) }}
+    {# ... #}
+
+    {{ form_row(form.brochure) }}
+{{ form_end(form) }}
 https://www.youtube.com/watch?v=apWjiEuDS0k&t=5s&ab_channel=NouvelleTechno
 
 https://symfony.com/doc/current/controller/upload_file.html
-
+{% endblock %}
 
