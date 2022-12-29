@@ -2,71 +2,30 @@
 
 namespace App\Controller;
 
-
-use Symfony\Component\Routing\Annotation\Route;
+use App\Entity\Article;
+use App\Form\ArticleType;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-
-
-
-
+use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\Routing\Annotation\Route;
 
 
 class test extends AbstractController
-{
-    #[Route('/test')]
-
-
-
-    public function menu()
+{#[Route('/test', name: 'app_test')]
+    public function index()
     {
+        return $this->render('add.html.twig');
 
-        return $this->render('test.html.twig');
     }
 
-
-    #[Route('/product/new', name: 'app_product_new')]
-    public function new(Request $request, SluggerInterface $slugger)
+    public function add()
     {
-        $product = new Product();
-        $form = $this->createForm(ProductType::class, $product);
-        $form->handleRequest($request);
+        $article = new Article();
+        $form = $this->createForm(ArticleType::class, $article);
 
-        if ($form->isSubmitted() && $form->isValid()) {
-            /** @var UploadedFile $brochureFile */
-            $brochureFile = $form->get('brochure')->getData();
-
-            // this condition is needed because the 'brochure' field is not required
-            // so the PDF file must be processed only when a file is uploaded
-            if ($brochureFile) {
-                $originalFilename = pathinfo($brochureFile->getClientOriginalName(), PATHINFO_FILENAME);
-                // this is needed to safely include the file name as part of the URL
-                $safeFilename = $slugger->slug($originalFilename);
-                $newFilename = $safeFilename.'-'.uniqid().'.'.$brochureFile->guessExtension();
-
-                // Move the file to the directory where brochures are stored
-                try {
-                    $brochureFile->move(
-                        $this->getParameter('brochures_directory'),
-                        $newFilename
-                    );
-                } catch (FileException $e) {
-                    // ... handle exception if something happens during file upload
-                }
-
-                // updates the 'brochureFilename' property to store the PDF file name
-                // instead of its contents
-                $product->setBrochureFilename($newFilename);
-            }
-
-            // ... persist the $product variable or any other work
-
-            return $this->redirectToRoute('app_product_list');
-        }
-
-        return $this->renderForm('product/new.html.twig', [
-            'form' => $form,
+        return $this->render('blog/add.html.twig', [
+            'form' => $form->createView()
         ]);
     }
 
+    // ...
 }
-
