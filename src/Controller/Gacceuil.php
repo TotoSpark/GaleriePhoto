@@ -13,7 +13,8 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 class Gacceuil extends AbstractController
 {
-    #[Route('/GAcceuil')]
+   // #[Route('/GAcceuil')]
+    #[Route("/",name:'acceuil')]
     //public function home(){
       // return $this->render('Gacceuil.html.twig');
      // session_start();

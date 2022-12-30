@@ -54,14 +54,25 @@ class ControllerFormulaire extends AbstractController{
     }
 
     // Partie Authentification
-    #[Route('/formulaire/authentification', name: 'authentification_affichage')]
+    #[Route('/authentification', name: 'authentification_affichage')]
     public function affichage_authentification(Request $request){
+        $chemin = __DIR__ . "/../../public/image/";
+        $fichier = scandir($chemin);
+        foreach ($fichier as $test) {
+            if (is_dir($test))
+                continue;
+            else {
+                $files[] = $test;
+            }
+        }
         $dataEntity = new Login();
         $form = $this->createForm(AuthType::class,$dataEntity);
         $form->handleRequest($request);
         if($form->isSubmitted() && $form->isValid()){
             if($form['email']->getData() == "toto@gmail.com" && $form['mdp']->getData() == "totototo1"){
-                $Message = $this->translator->trans("Authentification Success"); 
+                //$Message = $this->translator->trans("Authentification Success");
+
+                return $this->render('Gacceuil.html.twig', ["images" => $files]);
             }
             else{
                 $Message = $this->translator->trans("Email or Password isn't correct"); 

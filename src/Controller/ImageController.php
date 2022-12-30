@@ -9,7 +9,8 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class ImageController extends AbstractController
 {
-    #[Route("/",name:'image')]
+   // #[Route("/",name:'image')]
+    #[Route('/image')]
     public function index():Response
     {
         return $this->render("home.html.twig");
