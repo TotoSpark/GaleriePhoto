@@ -18,7 +18,7 @@ use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Validator\Validation;
 use Symfony\Component\Validator\Constraints;
 use Symfony\Component\Form\Extension\Validator\ValidatorExtension;
-
+use Symfony\Component\HttpFoundation\Session\Session;
 use Symfony\Component\Translation\Loader\XliffFileLoader;
 use Symfony\Component\Translation\Translator;
 use Symfony\Contracts\Translation\TranslatorInterface;
@@ -68,11 +68,14 @@ class ControllerFormulaire extends AbstractController{
         $dataEntity = new Login();
         $form = $this->createForm(AuthType::class,$dataEntity);
         $form->handleRequest($request);
+        //$session = new Session();
+
         if($form->isSubmitted() && $form->isValid()){
             if($form['email']->getData() == "toto@gmail.com" && $form['mdp']->getData() == "totototo1"){
                 //$Message = $this->translator->trans("Authentification Success");
 
                 return $this->render('Gacceuil.html.twig', ["images" => $files]);
+                //return $this->render('Gacceuil.html.twig', ["images" => $files],$session->start());
             }
             else{
                 $Message = $this->translator->trans("Email or Password isn't correct"); 

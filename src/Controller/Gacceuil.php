@@ -40,6 +40,7 @@ class Gacceuil extends AbstractController
             }
         }
         return $this->render('Gacceuil.html.twig', ["images" => $files]);
+
     }
     public function getemail(): ?email
    {

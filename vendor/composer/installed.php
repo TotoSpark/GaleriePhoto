@@ -3,7 +3,7 @@
         'name' => '__root__',
         'pretty_version' => 'dev-test',
         'version' => 'dev-test',
-        'reference' => 'dd4bc9cf20e78f082c5ebc529e1918f987ce7f6e',
+        'reference' => 'bf218faed277b116e691593953cdd0bfd2c06549',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -13,7 +13,7 @@
         '__root__' => array(
             'pretty_version' => 'dev-test',
             'version' => 'dev-test',
-            'reference' => 'dd4bc9cf20e78f082c5ebc529e1918f987ce7f6e',
+            'reference' => 'bf218faed277b116e691593953cdd0bfd2c06549',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
@@ -768,6 +768,15 @@
             'install_path' => __DIR__ . '/../symfony/var-exporter',
             'aliases' => array(),
             'dev_requirement' => false,
+        ),
+        'symfony/web-profiler-bundle' => array(
+            'pretty_version' => 'v6.1.9',
+            'version' => '6.1.9.0',
+            'reference' => 'fd630db5a73a8ef6e7e10919d61c70d249593fa2',
+            'type' => 'symfony-bundle',
+            'install_path' => __DIR__ . '/../symfony/web-profiler-bundle',
+            'aliases' => array(),
+            'dev_requirement' => true,
         ),
         'symfony/yaml' => array(
             'pretty_version' => 'v6.1.6',

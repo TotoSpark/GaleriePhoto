@@ -278,16 +278,16 @@
     <!-- Collection of nav links, forms, and other content for toggling -->
     <div id="navbarCollapse" class="collapse navbar-collapse">
         <ul class="nav navbar-nav">
-            <li><a href="./">Home</a></li>
+            <!-- <li><a href="./">Home</a></li>
 
-            <!--<li class="dropdown">
-                <a data-toggle="dropdown" class="dropdown-toggle" href="#">Services <b class="caret"></b></a>
-                <ul class="dropdown-menu">
-                    <li><a href="#">Web Design</a></li>
-                    <li><a href="#">Web Development</a></li>
-                    <li><a href="#">Graphic Design</a></li>
-                    <li><a href="#">Digital Marketing</a></li>
-                </ul> !-->
+           --<li class="dropdown">
+                 <a data-toggle="dropdown" class="dropdown-toggle" href="#">Services <b class="caret"></b></a>
+                 <ul class="dropdown-menu">
+                     <li><a href="#">Web Design</a></li>
+                     <li><a href="#">Web Development</a></li>
+                     <li><a href="#">Graphic Design</a></li>
+                     <li><a href="#">Digital Marketing</a></li>
+                 </ul> !-->
             </li>
 
         </ul>
@@ -323,7 +323,16 @@
             <li><a href="/authentification">Connexion</a></li>
             <li><a href="./register">Nouveau compte</a></li>
             <li><a href="./test">test</a></li>
-            <li><a href="logout">Déconnexion</a></li>
+            <!--<li><a href="logout">Déconnexion</a></li> -->
+
+            <!-- <?php if(isset($_SESSION['Utilisateur']))
+            { ?>
+
+            <a href="logout">Déconnexion</a>
+            <?php } ?> -->
+<?php if( is_user_logged_in())) { ?>
+<li><a href="logout">Déconnexion</a></li>
+<?php } ; ?
 
 
         </ul>
