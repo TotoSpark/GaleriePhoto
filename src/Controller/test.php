@@ -58,6 +58,14 @@ class test extends AbstractController
             'form' => $form->createView()
         ]);
     }
+    public function edit($id)
+    {
+        $article = $this->getDoctrine()->getRepository(Article::class)->find($id);
+
+        return $this->render('blog/edit.html.twig', [
+            'article' => $article
+        ]);
+    }
 
     // ...
 }
