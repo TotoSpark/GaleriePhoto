@@ -50,4 +50,6 @@ class RegistrationFormType extends AbstractType
             'data_class' => User::class,
         ]);
     }
+
 }
+https://qferrer.medium.com/securing-your-symfony-forms-with-google-recaptcha-v2-dbfc902b0c50
