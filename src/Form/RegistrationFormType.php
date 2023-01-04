@@ -12,13 +12,20 @@ use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Validator\Constraints\IsTrue;
 use Symfony\Component\Validator\Constraints\Length;
 use Symfony\Component\Validator\Constraints\NotBlank;
+use Karser\Recaptcha3Bundle\Form\Recaptcha3Type;
+use Karser\Recaptcha3Bundle\Validator\Constraints\Recaptcha3;
+use VictorPrdh\RecaptchaBundle\Form\ReCaptchaType;
+
 
 class RegistrationFormType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         $builder
+
             ->add('email')
+
+            ->add("recaptcha", ReCaptchaType::class)
 
             ->add('plainPassword', RepeatedType::class, [
                 'type' => PasswordType::class,
@@ -52,4 +59,3 @@ class RegistrationFormType extends AbstractType
     }
 
 }
-https://qferrer.medium.com/securing-your-symfony-forms-with-google-recaptcha-v2-dbfc902b0c50

@@ -10,6 +10,7 @@
         "doctrine/doctrine-bundle": "^2.7",
         "doctrine/doctrine-migrations-bundle": "^3.2",
         "doctrine/orm": "^2.13",
+        "karser/karser-recaptcha3-bundle": "^0.1.23",
         "liip/imagine-bundle": "^2.10",
         "symfony/console": "6.1.*",
         "symfony/dotenv": "6.1.*",
@@ -23,7 +24,8 @@
         "symfony/translation": "6.1.*",
         "symfony/twig-bundle": "6.1.*",
         "symfony/validator": "6.1.*",
-        "symfony/yaml": "6.1.*"
+        "symfony/yaml": "6.1.*",
+        "victor-prdh/recaptcha-bundle": "^1.6"
     },
     "config": {
         "allow-plugins": {
