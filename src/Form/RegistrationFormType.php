@@ -36,6 +36,7 @@ class RegistrationFormType extends AbstractType
                 'attr' => array('class' => 'taillebar'),
                 'format' => 'yyyy-MM-dd',
             ])
+
             ->add("recaptcha", ReCaptchaType::class)
 
             ->add('plainPassword', RepeatedType::class, [
