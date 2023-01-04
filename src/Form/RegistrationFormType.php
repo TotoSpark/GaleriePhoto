@@ -15,7 +15,7 @@ use Symfony\Component\Validator\Constraints\NotBlank;
 use Karser\Recaptcha3Bundle\Form\Recaptcha3Type;
 use Karser\Recaptcha3Bundle\Validator\Constraints\Recaptcha3;
 use VictorPrdh\RecaptchaBundle\Form\ReCaptchaType;
-
+use Symfony\Component\Form\Extension\Core\Type\DateType;
 
 class RegistrationFormType extends AbstractType
 {
@@ -23,11 +23,23 @@ class RegistrationFormType extends AbstractType
     {
         $builder
 
-            ->add('email')
+            ->add('email', null, array(
+                'label' => 'Email',
+                'attr' => array('class' => 'taillebar')))
+            ->add('pseudo', null, array(
+                'label' => 'Pseudo',
+                'attr' => array('class' => 'taillebar')))
 
+            ->add('age', DateType::class, [
+                'label' => 'Date de naissance',
+                'widget' => 'single_text',
+                'attr' => array('class' => 'taillebar'),
+                'format' => 'yyyy-MM-dd',
+            ])
             ->add("recaptcha", ReCaptchaType::class)
 
             ->add('plainPassword', RepeatedType::class, [
+
                 'type' => PasswordType::class,
                 'invalid_message' => 'The password fields must match.',
                 'options' => ['attr' => ['class' => 'password-field']],
