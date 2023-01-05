@@ -1,9 +1,52 @@
 <!DOCTYPE html>
-<html>
 <head>
-    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <style>
+
+    </style>
+    <link rel="stylesheet" href="style.css" />
 </head>
+<title>Inscription</title>
+
+<nav class="navbar navbar-default navbar-expand-lg navbar-light">
+    <div class="navbar-header">
+        <a class="navbar-brand" href="./">Galerie<b>Photo</b></a>
+        <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
+            <span class="navbar-toggler-icon"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+    </div>
+    <div id="navbarCollapse" class="collapse navbar-collapse">
+        <ul class="nav navbar-nav navbar-right">
+            <li class="dropdown">
+                <ul class="dropdown-menu">
+
+                    <li>
+                        <form class="form-inline login-form" action="/formulaire/authentification" method="post">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                                <input type="text" class="form-control" placeholder="Username" required>
+                            </div>
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-lock"></i></span>
+                                <input type="text" class="form-control" placeholder="Password" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Login</button>
+                        </form>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="/authentification">Connexion</a></li>
+            <li><a href="./register">Nouveau compte</a></li>
+            <li><a href="./test">test</a></li>
+        </ul>
+    </div>
 <body>
-<h1> Site ouvert </h1>
+<h1> Compte crée </h1>
 </body>
 </html>

@@ -16,7 +16,7 @@ use Symfony\Component\Validator\Constraints\Length;
 class AuthController extends AbstractController
 {
     /**
-     * @Route("./login", name="auth_login")
+     * @Route("./nlogin", name="auth_login")
      * @return Response
      */
     public function login(Request $request)
@@ -36,7 +36,7 @@ class AuthController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()){
             return $this->render("authok.html.twig",["data" => $form->getData()]);
         } else {
-            return $this->render("login.html.twig",["infoForm" => $infoRendu]);
+            return $this->render("ancienlogin.html.twig",["infoForm" => $infoRendu]);
         }
     }
 }

@@ -30,6 +30,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     private ?\DateTime $age = null;
 
 
+
     #[ORM\Column]
     private array $roles = [];
 

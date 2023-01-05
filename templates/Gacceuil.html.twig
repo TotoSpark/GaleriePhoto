@@ -100,6 +100,8 @@
             <ul class="sidebar-nav">
 
                 <li>
+                    <?php var_dump( $test ); exit; ?>
+
                     <a href="#">Utilisateur</a>
                     <?php echo $email ?>
                     <?php foreach ($resultat as $row): ?>
@@ -164,6 +166,10 @@
                 <input type="submit" name="" value="Enregistrer" class="btn btn-primary btn-large">
             </div>
 
+
+
+
+            <button type="submit" class="btn">Inscription</button>
         </form>
 </nav>
 </body>

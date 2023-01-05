@@ -14,8 +14,8 @@ public function buildForm(FormBuilderInterface $builder, array $options)
 {
 $builder
 // ...
-->add('brochure', FileType::class, [
-'label' => 'Brochure (PDF file)',
+    ->add('imageFile', VichImageType::class, [
+'label' => 'nom de limage',
 
 // unmapped means that this field is not associated to any entity property
 'mapped' => false,
