@@ -32,7 +32,6 @@ class test
             // otherwise the event listeners won't be called and the file is lost
             $this->updatedAt = new \DateTimeImmutable();
         }
-
     }
 
     public function getImageFile(): ?File
