@@ -259,3 +259,8 @@ body {
     font-weight: bold;
     color: #29c68c;
 }
+
+taille {
+    width : 150px;
+    height : 150px;
+}
